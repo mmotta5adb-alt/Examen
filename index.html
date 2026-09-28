@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida Típica de Italia | Un Viaje Gastronómico</title>
+    <style>
+        /* --- ESTILOS GENERALES (CSS) --- */
+        :root {
+            --color-primario: #008C45; /* Verde Bandera Italiana */
+            --color-secundario: #CD212A; /* Rojo Bandera Italiana */
+            --color-fondo: #F4F4F9;
+            --color-tarjeta: #FFFFFF;
+            --color-texto: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .introduccion {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .introduccion h2 {
+            color: var(--color-primario);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Línea decorativa tricolor debajo del título principal */
+        .introduccion h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, #008C45 33%, #F4F4F9 33%, #F4F4F9 66%, #CD212A 66%);
+            margin: 8px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* --- GRILLA DE PLATOS --- */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .plato-card {
+            background-color: var(--color-tarjeta);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .plato-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .plato-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .plato-info {
+            padding: 25px;
+        }
+
+        .plato-info h3 {
+            color: var(--color-secundario);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .plato-info p {
+            font-size: 0.95rem;
+            color: #666666;
+            margin-bottom: 15px;
+        }
+
+        .region-tag {
+            display: inline-block;
+            background-color: #e2e2e2;
+            color: #444444;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* --- PIE DE PÁGINA --- */
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividad básica para pantallas móviles pequeñas */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            header p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>La Cucina Italiana</h1>
+        <p>Tradición, pasión y frescura en cada ingrediente</p>
+    </header>
+
+    <div class="container">
+        <section class="introduccion">
+            <h2>Platos Emblemáticos</h2>
+            <p>Descubre algunos de los sabores más icónicos y representativos de las diversas regiones de Italia.</p>
+        </section>
+
+        <main class="menu-grid">
+            <!-- Plato 1: Pizza Napoletana -->
+            <article class="plato-card">
+                <img class="plato-img" src="https://unsplash.com" alt="Pizza Napoletana tradicional">
+                <div class="plato-info">
+                    <h3>Pizza Napoletana</h3>
+                    <p>Con su masa tierna y delgada pero con bordes altos, la auténtica versión napolitana destaca por la simplicidad de sus ingredientes: tomate San Marzano, mozzarella de búfala, albahaca fresca y aceite de oliva virgen extra.</p>
+                    <span class="region-tag">Campania</span>
+                </div>
+            </article>
+
+            <!-- Plato 2: Pasta alla Carbonara -->
+            <article class="plato-card">
+                <img class="plato-img" src="https://unsplash.com" alt="Spaghetti alla Carbonara">
+                <div class="plato-info">
+                    <h3>Pasta alla Carbonara</h3>
+                    <p>Un pilar de la cocina romana. Se elabora cocinando la pasta al dente mezclada vivazmente con guanciale crujiente, yemas de huevo fresco, abundante queso Pecorino Romano y un toque generoso de pimienta negra molida.</p>
+                    <span class="region-tag">Lacio</span>
+                </div>
+            </article>
+
+            <!-- Plato 3: Tiramisú -->
+            <article class="plato-card">
+                <img class="plato-img" src="https://unsplash.com" alt="Postre Tiramisú clásico">
+                <div class="plato-info">
+                    <h3>Tiramisú</h3>
+                    <p>El postre italiano por excelencia. Capas alternas de bizcochos de soletilla (savoiardi) empapados en un buen café espresso fuerte, crema rica y suave a base de queso mascarpone batido, coronado con una fina capa de cacao amargo.</p>
+                    <span class="region-tag">Véneto</span>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Delicias de Italia. Creado con pasión por la buena comida.</p>
+    </footer>
+
+</body>
+</html>
